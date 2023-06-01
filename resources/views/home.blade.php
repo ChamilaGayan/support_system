@@ -25,10 +25,10 @@
                                 <div class="card features feature-primary rounded border-0 shadow p-4">
                                     <div class="d-flex align-items-center">
                                         <div class="icon text-center rounded-md">
-                                            <i class="uil uil-bed h3 mb-0"></i>
+                                            <i class="uil uil-folder-open h3 mb-0"></i>
                                         </div>
                                         <div class="flex-1 ms-2">
-                                            {{-- <h5 class="mb-0">{{ $task_count }}</h5> --}}
+                                            <h5 class="mb-0">{{ $open_ticket }}</h5>
                                             <p class="text-muted mb-0">Open</p>
                                         </div>
                                     </div>
@@ -36,13 +36,13 @@
                             </div><!--end col-->
 
                             <div class="col-xl-4 col-lg-4 col-md-4 mt-4">
-                                <div class="card features feature-primary rounded border-0 shadow p-4">
+                                <div class="card features feature-success rounded border-0 shadow p-4">
                                     <div class="d-flex align-items-center">
                                         <div class="icon text-center rounded-md">
-                                            <i class="uil uil-social-distancing h3 mb-0"></i>
+                                            <i class="uil uil-envelope-send h3 mb-0"></i>
                                         </div>
                                         <div class="flex-1 ms-2">
-                                            {{-- <h5 class="mb-0">{{ $newtask }}</h5> --}}
+                                            <h5 class="mb-0">{{ $replied_ticket }}</h5>
                                             <p class="text-muted mb-0">Replied</p>
                                          </div>
                                     </div>
@@ -50,13 +50,13 @@
                             </div><!--end col-->
 
                             <div class="col-xl-4 col-lg-4 col-md-4 mt-4">
-                                <div class="card features feature-primary rounded border-0 shadow p-4">
+                                <div class="card features feature-danger rounded border-0 shadow p-4">
                                     <div class="d-flex align-items-center">
                                         <div class="icon text-center rounded-md">
-                                            <i class="uil uil-medkit h3 mb-0"></i>
+                                            <i class="uil uil-x h3 mb-0"></i>
                                         </div>
                                         <div class="flex-1 ms-2">
-                                            {{-- <h5 class="mb-0">{{ $completedTask }}</h5> --}}
+                                            <h5 class="mb-0">{{ $closed_ticket }}</h5>
                                             <p class="text-muted mb-0">Closed</p>
                                         </div>
                                     </div>

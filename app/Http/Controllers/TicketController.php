@@ -9,16 +9,22 @@ class TicketController extends Controller
 {
     public function addTicket(Request $request)
     {
-        $random = mt_rand(1000000000, 9999999999);
+
+    $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $pin = mt_rand(1000000, 9999999)
+    . mt_rand(1000000, 9999999)
+    . $characters[rand(0, strlen($characters) - 1)];
+    $string = str_shuffle($pin);
+
         Ticket::create([
-            'reference_number' => $random,
+            'reference_number' => $string,
             'customer_name' => $request->name,
             'customer_email' => $request->email,
             'customer_phone' => $request->phone_number,
             'customer_message' => $request->message,
         ]);
 
-        return redirect()->back()->with('status',' Thank you, your message has been submitted to us');
+        return redirect()->back()->with('status',' Thank you!, your message has been submitted to us');
     }
 
     public function ticket()
@@ -36,7 +42,7 @@ class TicketController extends Controller
     public function close($ticket_id)
     {
         $ticket = Ticket::find($ticket_id);
-        $ticket->status = 3;
+        $ticket->status = 2;
         $ticket->update();
         return redirect()->back()->with('status','Ticket closed successfully');
     }
@@ -45,6 +51,7 @@ class TicketController extends Controller
     {
         $ticket = Ticket::find($ticket_id);
         $ticket->reply = $request->input('reply');
+        $ticket->status = 1;
         $ticket->update();
         return redirect()->back()->with('status','Reply successfully sent to customer email.');
 

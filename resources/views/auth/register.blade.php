@@ -10,7 +10,7 @@
             <div class="col-xl-4 col-lg-5 col-md-6 d-flex flex-column mx-auto">
               <div class="card card-plain mt-0 bg-secondary">
                 <div class="card-header pb-2 text-left bg-transparent">
-                  <h3 class="font-weight-bolder text-info text-gradient">Register form</h3>
+                  <h3 class="font-weight-bolder text-light text-gradient">Register form</h3>
                   <p class="mb-0">Enter your name, email and password to register</p>
                 </div>
                 <div class="card-body">

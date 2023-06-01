@@ -18,11 +18,11 @@
                     <div class="layout-specing">
                         <div class="row">
                             <div class="col-xl-9 col-lg-6 col-md-4">
-                                <h5 class="mb-0">Task</h5>
+                                <h5 class="mb-0">Ticket</h5>
                                 <nav aria-label="breadcrumb" class="d-inline-block mt-2">
                                     <ul class="breadcrumb breadcrumb-muted bg-transparent rounded mb-0 p-0">
                                         <li class="breadcrumb-item">Home</li>
-                                        <li class="breadcrumb-item active" aria-current="page">Task</li>
+                                        <li class="breadcrumb-item active" aria-current="page">Ticket</li>
                                     </ul>
                                 </nav>
 
@@ -49,8 +49,11 @@
                                                 <div class="modal-header border-bottom p-3">
                                                     <h5 class="modal-title" id="exampleModalLabel">Ticket Preview</h5>
 
-                                                    @if ($ticket->status == 3)
+                                                    @if ($ticket->status == 2)
                                                     <span class="badge bg-soft-danger">Ticket Closed</span>
+
+                                                    @elseif ($ticket->status == 1)
+                                                    <span class="badge bg-soft-success">Completed</span>
                                                     @else
                                                     <a href="{{ route ('ticket.close', $ticket->id) }}" class="btn btn-outline-danger mb-2 mouse-down"><i class="uil uil-book"></i>Close</a>
                                                     @endif
@@ -89,7 +92,7 @@
 
                                                             <div class="col-lg-6 col-md-6">
                                                                 <div class="mb-3">
-                                                                    <label class="form-label">Reference Email : {{ $ticket->customer_email }}</label>
+                                                                    <label class="form-label">Customer Email : {{ $ticket->customer_email }}</label>
 
                                                                 </div>
                                                             </div><!--end col-->
@@ -103,12 +106,13 @@
                                                         </div><!--end row-->
 
                                                         <div class="row">
-                                                            <p class="text text-secondary">{{ $ticket->customer_message }}</p>
+                                                            <label class="form-label">Customer Message :  <p class="text text-secondary">{{ $ticket->customer_message }}</p></label>
 
 
                                                             <div class="col-lg-12">
+                                                                <label class="form-label">Reply</label>
                                                                 <div class="d-grid">
-                                                                    <textarea name="reply" id="reply" rows="4" class="form-control" placeholder="Reply :"></textarea>
+                                                                    <textarea name="reply" id="reply" rows="4" class="form-control" placeholder="{{ $ticket->reply }}"></textarea>
                                                                 </div>
                                                             </div>
                                                             <br>

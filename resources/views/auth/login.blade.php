@@ -10,7 +10,7 @@
             <div class="col-xl-4 col-lg-5 col-md-6 d-flex flex-column mx-auto">
               <div class="card card-plain mt-5 mb-5 bg-secondary">
                 <div class="card-header pb-4 text-left bg-transparent">
-                  <h3 class="font-weight-bolder text-info text-gradient">Welcome back</h3>
+                  <h3 class="font-weight-bolder text-light text-gradient">Welcome back</h3>
                   <p class="mb-0">Enter your email and password to sign in</p>
                 </div>
                 <div class="card-body">
@@ -49,7 +49,7 @@
                     Don't have an account?
                     <a href="{{ route('register') }}" class="text-info text-gradient font-weight-bold">Register</a>
                   </p>
-                  <a href="{{ url('/') }}" class="btn btn-outline-primary mb-2 mouse-down"><i class="mdi mdi-email"></i> Go Back</a>
+                  <a href="{{ url('/') }}" class="btn btn-outline-light mb-2 mouse-down"><i class="mdi mdi-email"></i> Go Back</a>
                 </div>
 
               </div>

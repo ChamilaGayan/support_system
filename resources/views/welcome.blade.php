@@ -16,6 +16,8 @@
         <!-- Slider -->
         <link rel="stylesheet" href="welcome/css/owl.carousel.min.css"/>
         <link rel="stylesheet" href="welcome/css/owl.theme.default.min.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
         <!-- Custom Css -->
         <link href="welcome/css/style.css" rel="stylesheet" type="text/css" />
         <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
@@ -44,7 +46,7 @@
 
 			@if (Route::has('login'))
                     @auth
-                        {{-- <li class="nav-item"><a href="{{ url('/') }}" class="nav-link">Home</a> </li> --}}
+
                     @else
                     <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Log in</a></li>
                     @endauth
@@ -148,12 +150,6 @@
                 </div><!--end row-->
             </div><!--end container-->
         </section><!--end section-->
-
-        <!-- Contact End -->
-
-        <!-- Footer Start -->
-        @include('layouts.footer')
-        <!-- Footer End -->
 
         <!-- Back to top -->
         <a href="#" class="back-to-top rounded text-center" id="back-to-top">
